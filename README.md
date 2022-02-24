@@ -55,9 +55,58 @@
 ]
 ```
 #### `POST` /api/v1/upload/city
-Uploads XML file with cities and distances 
 ##### Example http://localhost:8080/api/v1/upload/city
-
+Upload XML file with cities
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<cities>
+    <city>
+        <name>Paris</name>
+        <latitude>48.864716</latitude>
+        <longitude>2.349014</longitude>
+    </city>
+    <city>
+        <name>Berlin</name>
+        <latitude>52.520008</latitude>
+        <longitude>13.404954</longitude>
+    </city>
+    <city>
+        <name>Samara</name>
+        <latitude>53.241505</latitude>
+        <longitude>50.221245</longitude>
+    </city>
+    <city>
+        <name>Toliatty</name>
+        <latitude>53.5303</latitude>
+        <longitude>49.3461</longitude>
+    </city>
+</cities>
+```
 #### `POST` /api/v1/upload/distance
 ##### Example http://localhost:8080/api/v1/upload/distance
-
+Upload XML file with distance
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<distances>
+    <distance>
+        <fromCity>Paris</fromCity>
+        <toCity>Samara</toCity>
+        <distance>3317</distance>
+    </distance>
+    <distance>
+        <fromCity>Paris</fromCity>
+        <toCity>Toliatty</toCity>
+        <distance>3254.53</distance>
+    </distance>
+    <distance>
+        <fromCity>Berlin</fromCity>
+        <toCity>Samara</toCity>
+        <distance>2444.61</distance>
+    </distance>
+    <distance>
+        <fromCity>Berlin</fromCity>
+        <toCity>Toliatty</toCity>
+        <distance>2380.74</distance>
+    </distance>
+</distances>
+```
