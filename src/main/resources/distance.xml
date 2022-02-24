@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<distances>
+    <distance>
+        <fromCity>Paris</fromCity>
+        <toCity>Samara</toCity>
+        <distance>3317</distance>
+    </distance>
+    <distance>
+        <fromCity>Paris</fromCity>
+        <toCity>Toliatty</toCity>
+        <distance>3254.53</distance>
+    </distance>
+    <distance>
+        <fromCity>Berlin</fromCity>
+        <toCity>Samara</toCity>
+        <distance>2444.61</distance>
+    </distance>
+    <distance>
+        <fromCity>Berlin</fromCity>
+        <toCity>Toliatty</toCity>
+        <distance>2380.74</distance>
+    </distance>
+</distances>

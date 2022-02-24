@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/changelog/changeset/create-city-table.yaml
+  - include:
+      file: liquibase/changelog/changeset/create-distance-table.yaml

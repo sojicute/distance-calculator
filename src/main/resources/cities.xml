@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cities>
+    <city>
+        <name>Paris</name>
+        <latitude>48.864716</latitude>
+        <longitude>2.349014</longitude>
+    </city>
+    <city>
+        <name>Berlin</name>
+        <latitude>52.520008</latitude>
+        <longitude>13.404954</longitude>
+    </city>
+    <city>
+        <name>Samara</name>
+        <latitude>53.241505</latitude>
+        <longitude>50.221245</longitude>
+    </city>
+    <city>
+        <name>Toliatty</name>
+        <latitude>53.5303</latitude>
+        <longitude>49.3461</longitude>
+    </city>
+</cities>

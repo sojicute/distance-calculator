@@ -1,0 +1,91 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-city
+      author: Anton Karpov
+      changes:
+      - createTable:
+          tableName: cities
+          columns:
+            - column:
+                name: id
+                type: bigint
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: name
+                type: varchar(200)
+                constraints:
+                  nullable: false
+                  unique: true
+            - column:
+                name: latitude
+                type: double
+            - column:
+                name: longitude
+                type: double
+#  - changeSet:
+#      id: insert-city
+#      author: Anton Karpov
+#      changes:
+#        - insert:
+#            tableName: cities
+#            columns:
+#              - column:
+#                  name: id
+#                  valueNumeric: 1
+#              - column:
+#                  name: name
+#                  value: Paris
+#              - column:
+#                  name: latitude
+#                  valueNumeric: 48.864716
+#              - column:
+#                  name: longitude
+#                  valueNumeric: 2.349014
+#        - insert:
+#            tableName: cities
+#            columns:
+#              - column:
+#                  name: id
+#                  valueNumeric: 2
+#              - column:
+#                  name: name
+#                  value: Berlin
+#              - column:
+#                  name: latitude
+#                  valueNumeric: 52.520008
+#              - column:
+#                  name: longitude
+#                  valueNumeric: 13.404954
+#        - insert:
+#            tableName: cities
+#            columns:
+#              - column:
+#                  name: id
+#                  valueNumeric: 3
+#              - column:
+#                  name: name
+#                  value: Samara
+#              - column:
+#                  name: latitude
+#                  valueNumeric: 53.241505
+#              - column:
+#                  name: longitude
+#                  valueNumeric: 50.221245
+#        - insert:
+#            tableName: cities
+#            columns:
+#              - column:
+#                  name: id
+#                  valueNumeric: 4
+#              - column:
+#                  name: name
+#                  value: Toliatty
+#              - column:
+#                  name: latitude
+#                  valueNumeric: 53.5303
+#              - column:
+#                  name: longitude
+#                  valueNumeric: 49.3461
