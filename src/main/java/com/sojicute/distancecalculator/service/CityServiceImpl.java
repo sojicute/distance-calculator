@@ -3,7 +3,6 @@ package com.sojicute.distancecalculator.service;
 import com.sojicute.distancecalculator.domain.City;
 import com.sojicute.distancecalculator.dto.CityDTO;
 import com.sojicute.distancecalculator.repository.CityRepository;
-import com.sojicute.distancecalculator.repository.DistanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,9 +15,6 @@ public class CityServiceImpl implements CityService {
     @Autowired
     private CityRepository cityRepository;
 
-    @Autowired
-    private DistanceRepository distanceRepository;
-
     @Override
     public List<CityDTO> findAll() {
         return cityRepository.findAll().stream().map(this::toCityDto).collect(Collectors.toList());
@@ -26,8 +22,7 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public List<City> findCitiesByName(List<String> cityNames) {
-        List<City> cities = cityRepository.findCitiesByNameIn(cityNames);
-        return cities;
+        return cityRepository.findCitiesByNameIn(cityNames);
     }
 
     @Override

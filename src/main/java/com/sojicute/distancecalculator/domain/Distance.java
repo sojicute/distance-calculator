@@ -1,14 +1,9 @@
 package com.sojicute.distancecalculator.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "distances")
-@NoArgsConstructor
-@AllArgsConstructor
 public class Distance {
 
     @Id
@@ -31,9 +26,6 @@ public class Distance {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public City getFromCity() {
         return fromCity;

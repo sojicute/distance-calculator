@@ -45,7 +45,7 @@ public class CalculateDistanceServiceImpl implements CalculateDistanceService {
 
         for (City fromCity : fromCityList) {
             for(City toCity : toCityList) {
-                double crowFlightDistance = getCrowflightDitstance(fromCity.getLatitude(), fromCity.getLongitude(),
+                double crowFlightDistance = getCrowFlightDistance(fromCity.getLatitude(), fromCity.getLongitude(),
                         toCity.getLatitude(), toCity.getLongitude());
 
                 ResultDTO result = new ResultDTO();
@@ -91,7 +91,7 @@ public class CalculateDistanceServiceImpl implements CalculateDistanceService {
         for (City fromCity : fromCityList) {
             for(City toCity : toCityList) {
                 ResultDTO result = new ResultDTO();
-                crowFlightDistance = getCrowflightDitstance(fromCity.getLatitude(), fromCity.getLongitude(),
+                crowFlightDistance = getCrowFlightDistance(fromCity.getLatitude(), fromCity.getLongitude(),
                         toCity.getLatitude(), toCity.getLongitude());
 
                 Distance distance = distanceService.getDistance(fromCity.getId(), toCity.getId());
@@ -113,7 +113,7 @@ public class CalculateDistanceServiceImpl implements CalculateDistanceService {
     }
 
 
-    private Double getCrowflightDitstance(double lat1, double lon1, double lat2, double lon2) {
+    private Double getCrowFlightDistance(double lat1, double lon1, double lat2, double lon2) {
         final int R = 6371;
         double latDistance = toRad(lat2 - lat1);
         double lonDistance = toRad(lon2 - lon1);

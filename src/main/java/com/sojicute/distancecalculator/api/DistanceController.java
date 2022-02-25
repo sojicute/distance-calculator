@@ -2,7 +2,7 @@ package com.sojicute.distancecalculator.api;
 
 import com.sojicute.distancecalculator.dto.CalculateType;
 import com.sojicute.distancecalculator.dto.ResultDTO;
-import com.sojicute.distancecalculator.service.CalculateDistanceServiceImpl;
+import com.sojicute.distancecalculator.service.CalculateDistanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import java.util.List;
 public class DistanceController {
 
     @Autowired
-    private CalculateDistanceServiceImpl calculateDistanceService;
+    private CalculateDistanceService calculateDistanceService;
 
 
     @PostMapping("/distance-calculator/calculate")

@@ -43,7 +43,7 @@ public class DeserializeXmlServiceImpl implements DeserializeXmlService{
             }
 
         } catch (IOException e) {
-            throw new DeserializeFromXmlException("Error", e);
+            throw new DeserializeFromXmlException("Error deserialize XML file with distance", e);
         }
     }
     @Override
@@ -60,7 +60,7 @@ public class DeserializeXmlServiceImpl implements DeserializeXmlService{
             }
 
         } catch (IOException e) {
-            throw new DeserializeFromXmlException("Error deserialize cities", e);
+            throw new DeserializeFromXmlException("Error deserialize XML file with cities", e);
         }
     }
 

@@ -10,7 +10,6 @@ public interface CityService {
     City findById(Long id);
     City findCityByName(String name);
     void save(City city);
-
     List<City> findCitiesByName(List<String> cityNames);
 
 }
