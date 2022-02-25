@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1")
 public class CityController {
 
     private final CityServiceImpl cityService;
@@ -25,7 +25,7 @@ public class CityController {
     @GetMapping("/city")
     public ResponseEntity<List<CityDTO>> getAllCities() {
         List<CityDTO> cities = cityService.findAll();
-        if (cities.isEmpty() && cities == null) {
+        if (cities.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(cities, HttpStatus.OK);
